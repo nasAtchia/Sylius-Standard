@@ -43,8 +43,8 @@ final class ProductControllerTest extends WebTestCase
         // Look for the quantity input field
         $quantityInputField = $crawler->filter('input[name="sylius_shop_add_to_cart[cartItem][quantity]"]');
         $this->assertSame(1, $quantityInputField->count());
-        $this->assertEquals(10, $quantityInputField->attr('value'));
         $this->assertEquals(10, $quantityInputField->attr('min'));
         $this->assertEquals(10, $quantityInputField->attr('step'));
+        $this->assertEquals(10, $quantityInputField->attr('value'));
     }
 }
