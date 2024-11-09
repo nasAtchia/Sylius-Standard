@@ -15,6 +15,7 @@ Encore
     .setOutputPath('public/build/app/shop')
     .setPublicPath('/build/app/shop')
     .addEntry('app-shop-entry', './assets/shop/entry.js')
+    .addEntry('app-shop-product-show', './assets/shop/scripts/product/show.js')
     .disableSingleRuntimeChunk()
     .cleanupOutputBeforeBuild()
     .enableSourceMaps(!Encore.isProduction())
