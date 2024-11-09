@@ -1,0 +1,4 @@
+<div class="mb-4">
+    {# Override the quantity field to set the default value to 10, with a minimum value of 10 and step increment of 10. #}
+    {{ form_row(hookable_metadata.context.form.cartItem.quantity, sylius_test_form_attribute('quantity')|sylius_merge_recursive({'attr': {'min': 10, 'step': 10, 'value': 10}})) }}
+</div>
