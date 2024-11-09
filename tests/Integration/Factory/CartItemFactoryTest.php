@@ -20,13 +20,13 @@ final class CartItemFactoryTest extends KernelTestCase
     {
         $container = static::getContainer();
 
+        /** @var CartItemFactory<OrderItemInterface> $cartItemFactory */
+        $cartItemFactory = $container->get(CartItemFactory::class);
+
         /** @var ProductRepositoryInterface<ProductInterface> $productRepository */
         $productRepository = $container->get('sylius.repository.product');
         /** @var Product $product */
         $product = $productRepository->findOneBy([]);
-
-        /** @var CartItemFactory<OrderItemInterface> $cartItemFactory */
-        $cartItemFactory = $container->get(CartItemFactory::class);
 
         $cartItem = $cartItemFactory->createForProduct($product);
 
