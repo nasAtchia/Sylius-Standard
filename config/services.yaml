@@ -28,3 +28,13 @@ services:
     App\Controller\:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
+        
+    # Alias the CartItemFactoryInterface to the sylius.factory.order_item service
+    Sylius\Component\Core\Factory\CartItemFactoryInterface: '@sylius.factory.order_item'
+
+    # Decorates the Sylius\Component\Core\Factory\CartItemFactory service
+    app.factory.cart_item:
+        class: App\Factory\CartItemFactory
+        decorates: sylius.factory.order_item
+        arguments: [ '@app.factory.cart_item.inner', '@sylius.modifier.order_item_quantity' ]
+        public: false

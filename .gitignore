@@ -1,3 +1,6 @@
+# JetBrains IDE
+.idea/
+
 /public/assets
 /public/build
 /public/css
@@ -27,19 +30,19 @@
 ###< symfony/framework-bundle ###
 
 ###> friendsofphp/php-cs-fixer ###
-/.php_cs
-/.php_cs.cache
+/.php-cs-fixer.php
+/.php-cs-fixer.cache
 ###< friendsofphp/php-cs-fixer ###
-
-###> phpunit/phpunit ###
-/.phpunit.result.cache
-/phpunit.xml
-###< phpunit/phpunit ###
 
 ###> lexik/jwt-authentication-bundle ###
 /config/jwt/*.pem
 !/config/jwt/*-test.pem
 ###< lexik/jwt-authentication-bundle ###
+
+###> symfony/phpunit-bridge ###
+.phpunit.result.cache
+/phpunit.xml
+###< symfony/phpunit-bridge ###
 
 ###> symfony/webpack-encore-bundle ###
 /node_modules/
@@ -61,3 +64,7 @@ phpstan.neon
 ###> liip/imagine-bundle ###
 /public/media/cache/
 ###< liip/imagine-bundle ###
+
+###> sylius/sylius ###
+/config/encryption/dev.key
+###< sylius/sylius ###
